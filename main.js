@@ -179,19 +179,19 @@ class operations {
     }
 }
 
-// Example usage:
+// Using it:
 
-let array1 = new twoDarray(2, 2);
-array1.construct([1, 2], [3, 4]);
+//let array1 = new twoDarray(2, 2);
+//array1.construct([1, 2], [3, 4]);
 
-let array2 = new twoDarray(2, 2);
-array2.construct([2, 0], [1, 2]);
+//let array2 = new twoDarray(2, 2);
+//array2.construct([2, 0], [1, 2]);
 
-let added = operations.add(array1, array2);
-added.show();
+//let added = operations.add(array1, array2);
+//added.show();
 
-let multiplied = operations.multiply(array1, array2);
-multiplied.show();
+//let multiplied = operations.multiply(array1, array2);
+//multiplied.show();
 
-let inverted = operations.inverse(array1);
-inverted.show();
+//let inverted = operations.inverse(array1);
+//inverted.show();
