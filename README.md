@@ -143,5 +143,6 @@
     ```
 
 ---
+Feel free to reach me out for suggestions and improvements.
 
-This guide provides a quick reference on how to use the `twoDarray` and `operations` classes for creating, displaying, editing, adding, multiplying, and inverting matrices, along with the expected outputs for each operation.
+Made and maintained by ```Baltej Singh```
