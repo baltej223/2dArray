@@ -22,12 +22,7 @@ class twoDarray{
                     column:this.m
                 };
                 
-                return {
-                    _2dArray:_2dArrays,
-                    Checked:true,
-                    rows:this.n,
-                    columns:this.m
-                };
+                return this._2dArray;
             }
 
         // catch(e){
@@ -56,17 +51,17 @@ class twoDarray{
             throw new Error("Passed 2D Array seems to have not been passed through construct method. Please pass it through construct method befor calling the print method");
         }
     }
-    edit(rowIndex, columnIndex, newValue){
+    edit(row, column, newValue){
         if(!newValue){
-            throw new Error(`Value to replace old value at ${rowIndex}*${columnIndex} is not provided at edit method`);
+            throw new Error(`Value to replace old value at ${row}*${column} is not provided at edit method`);
         }
-        if (rowIndex<this.n && columnIndex<this.m){
+        if (row-1<this.n && column-1<this.m){
             let main2Darray = this._2dArray._2dArray;
-            main2Darray[rowIndex-1][columnIndex-1] = newValue;
+            main2Darray[row-1][column-1] = newValue;
             this._2dArray._2dArray = main2Darray;
         }
         else{
-            throw new Error("The provided position of the element doesn't exist, the position provided is row:"+rowIndex+" and column:"+columnIndex+"where as this 2d array only is of "+this.n+"*"+this.m);
+            throw new Error("The provided position of the element doesn't exist, the position provided is row:"+row+" and column:"+columnIndex+"where as this 2d array only is of "+this.n+"*"+this.m);
         }
     }
     retrive(rowNumber=1, columnNumber){
@@ -78,18 +73,6 @@ class twoDarray{
         }
     }
 }
-
-let _2dArray = new twoDarray(3,4);
-let constructed = _2dArray.construct(
-    [1,2,3,1],
-    [4,5,6,1],
-    [7,8,9,1],
-    );
-_2dArray.show(); // will show the 2d array
-_2dArray.edit(2,3,9); //changing the value at 2*3 from 6 to 9
-_2dArray.show(); // will show the updated 2d array
-console.log(_2dArray.retrive(3,3)); //9
-// console.log(constructed);
 
 
 class operations {
@@ -179,7 +162,7 @@ class operations {
     }
 }
 
-// Using it:
+// Example usage:
 
 //let array1 = new twoDarray(2, 2);
 //array1.construct([1, 2], [3, 4]);
